@@ -1,0 +1,30 @@
+<div class="container" *ngIf="person">
+  <table class="info-table">
+    <caption>个人信息</caption>
+    <tr>
+      <td>姓名：</td>
+      <td>{{person.name}}</td>
+    </tr>
+    <tr>
+      <td>性别：</td>
+      <td>
+        {{person.sex}}
+      </td>
+    </tr>
+    <tr>
+      <td>年龄：</td>
+      <td>{{person.age}}</td>
+    </tr>
+    <tr>
+      <td>电话：</td>
+      <td>{{person.phone}}</td>
+    </tr>
+    <tr>
+      <td>住址：</td>
+      <td>
+        <pre>{{person.address}}</pre>
+      </td>
+    </tr>
+  </table>
+  <button type="button" routerLink="/edit">编辑</button>
+</div>
