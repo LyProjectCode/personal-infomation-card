@@ -20,7 +20,7 @@
       <div class="info-box-item">
         <label for="age">年龄：</label>
         <input type="number" name="age" [(ngModel)]="person.age" #age="ngModel" min="1" max="150"
-         appNoSpace required />
+        pattern="^(?:[1-9][0-9]?|1[04][0-9]|150)$" appNoSpace required />
       </div>
       <div *ngIf="age.invalid" class="err-message">
         <div *ngIf="age.errors.pattern">
