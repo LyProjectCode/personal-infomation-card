@@ -7,7 +7,6 @@ import { InMemoryDataService } from './in-memory-data.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PersonComponent } from './person/person.component';
 import { PersonAddComponent } from './person-add/person-add.component';
 import { PersonEditComponent } from './person-edit/person-edit.component';
 import { NoSpaceDirective } from './no-space.directive';
@@ -19,7 +18,6 @@ import { PersonInfoComponent } from './person-info/person-info.component';
 @NgModule({
   declarations: [
     AppComponent,
-    PersonComponent,
     PersonAddComponent,
     PersonEditComponent,
     NoSpaceDirective,
