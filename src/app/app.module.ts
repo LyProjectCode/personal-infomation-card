@@ -11,6 +11,8 @@ import { PersonComponent } from './person/person.component';
 import { PersonAddComponent } from './person-add/person-add.component';
 import { PersonEditComponent } from './person-edit/person-edit.component';
 import { NoSpaceDirective } from './no-space.directive';
+import { NavComponent } from './component/nav/nav.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -19,7 +21,9 @@ import { NoSpaceDirective } from './no-space.directive';
     PersonComponent,
     PersonAddComponent,
     PersonEditComponent,
-    NoSpaceDirective
+    NoSpaceDirective,
+    NavComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
