@@ -57,6 +57,7 @@ button {
   max-height: 50px;
   min-width: 70px;
   background-color: #607d8b;
+  cursor: pointer;
 }
 
 /* button:hover {
@@ -66,8 +67,8 @@ button {
 
 button:disabled {
   background-color: #b4b2b2;
-  cursor: pointer;
   color: #607d8b;
+  cursor: not-allowed;
 }
 
 .ng-valid[required],
