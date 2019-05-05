@@ -1,0 +1,35 @@
+.info-table {
+  width: 70%;
+  max-width: 700px;
+  margin: auto auto 20px auto;
+  /* color: #333; */
+  font-size: 14px;
+  /* background-color: #fff; */
+  border: 1px solid #ddd;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.info-table caption {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.info-table td {
+  padding: 8px;
+  border-top: 1px solid #ddd;
+}
+
+.info-table td:nth-child(1) {
+  border-right: 1px solid #ddd;
+  width: 30%;
+  text-align: center;
+  background: #f0efef;
+}
+
+.info-table td:nth-child(2) {
+  width: 70%;
+  text-align: left;
+  word-wrap: break-word;
+  word-break: break-all;
+}
