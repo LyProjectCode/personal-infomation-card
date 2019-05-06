@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="info-box">
+    <h2 class="info-box-title">金额转换</h2>
+    <form #changeForm="ngForm" autocomplete="off">
+      <div class="info-box-item">
+        <label for="name">金额：</label>
+        <input type="number" id="money" [(ngModel)]="transform" #money="ngModel" placeholder="请输入金额" name="name"
+          pattern="^\d{1,3}(\.\d{1,2})?$" minlength="1" maxlength="6" appNoSpace required />
+      </div>
+      <div *ngIf="money.invalid" class="err-message">
+        <div *ngIf="money.errors.pattern">
+          最多3位整数，两位小数
+        </div>
+      </div>
+      <div class="info-box-item"><label>大写金额:{{ transform | money }}</label></div>
+    </form>
+  </div>
+</div>

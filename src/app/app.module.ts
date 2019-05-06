@@ -13,6 +13,10 @@ import { NoSpaceDirective } from './no-space.directive';
 import { NavComponent } from './component/nav/nav.component';
 import { HomeComponent } from './home/home.component';
 import { PersonInfoComponent } from './person-info/person-info.component';
+import { ExerciseComponent } from './exercise/exercise.component';
+import { ExercisePipeComponent } from './exercise/exercise-pipe/exercise-pipe.component';
+import { ExerciseServiceComponent } from './exercise/exercise-service/exercise-service.component';
+import { MoneyPipe } from './pipe/money.pipe';
 
 
 @NgModule({
@@ -23,7 +27,11 @@ import { PersonInfoComponent } from './person-info/person-info.component';
     NoSpaceDirective,
     NavComponent,
     HomeComponent,
-    PersonInfoComponent
+    PersonInfoComponent,
+    ExerciseComponent,
+    ExercisePipeComponent,
+    ExerciseServiceComponent,
+    MoneyPipe
   ],
   imports: [
     BrowserModule,

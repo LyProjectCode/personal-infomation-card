@@ -31,13 +31,13 @@ export class PersonAddComponent implements OnInit {
       return;
     }
     this.personHttpService.addPersonModel(person);
-    this.router.navigate(['/person'], { relativeTo: this.route });
+    this.router.navigate(['/info'], { relativeTo: this.route });
   }
   // 判断个人信息是否已经保存
   private checkStatus(): void {
     let personInfo = this.personDataService.getPersonModel();
     if (personInfo) {
-      this.router.navigate(['/person'], { relativeTo: this.route });
+      this.router.navigate(['/info'], { relativeTo: this.route });
     }
   }
 }

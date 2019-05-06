@@ -3,6 +3,7 @@
   <div class="nav-right">
     <a routerLink="/home" routerLinkActive="active">主页</a>
     <a routerLink="/info" routerLinkActive="active">个人信息</a>
+    <a *ngIf="personDataService.getPersonModel()" routerLink="/exercise" routerLinkActive="active">练习</a>
     <a (click)="onEsc()">退出</a>
   </div>
 </div>

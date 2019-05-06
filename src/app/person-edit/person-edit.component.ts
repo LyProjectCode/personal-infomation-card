@@ -36,7 +36,7 @@ export class PersonEditComponent implements OnInit {
       return;
     }
     this.personHttpService.addPersonModel(person);
-    this.router.navigate(['/person'], { relativeTo: this.route });
+    this.router.navigate(['/info'], { relativeTo: this.route });
   }
   // 取消编辑，如果数据发生变化进行提示
   public cancel(dirtyStatus: boolean): void {
@@ -46,6 +46,6 @@ export class PersonEditComponent implements OnInit {
         return;
       }
     }
-    this.router.navigate(['/person'], { relativeTo: this.route });
+    this.router.navigate(['/info'], { relativeTo: this.route });
   }
 }
