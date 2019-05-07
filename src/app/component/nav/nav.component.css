@@ -27,6 +27,11 @@
   text-align: right;
 }
 
+.nav-right label{ 
+  color: #fff;
+  font-weight:none !important;
+}
+
 .nav a{
   display:inline-block;
   height: 68px;

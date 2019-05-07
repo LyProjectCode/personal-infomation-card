@@ -8,6 +8,7 @@ import { AuthGuard } from './auth/auth.guard';
 import { ExerciseComponent } from './exercise/exercise.component';
 import { ExercisePipeComponent } from './exercise/exercise-pipe/exercise-pipe.component';
 import { ExerciseServiceComponent } from './exercise/exercise-service/exercise-service.component';
+import { ExerciseHomeComponent } from './exercise/exercise-home/exercise-home.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -18,6 +19,7 @@ const routes: Routes = [
   {
     path: 'exercise', component: ExerciseComponent, canActivate: [AuthGuard],
     children: [
+      { path: '', component: ExerciseHomeComponent },
       { path: 'pipe', component: ExercisePipeComponent },
       { path: 'service', component: ExerciseServiceComponent }
     ]}

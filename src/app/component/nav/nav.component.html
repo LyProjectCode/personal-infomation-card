@@ -1,6 +1,7 @@
 <div class="nav">
   <div class="nav-left"><label >个人信息登记卡</label></div>
   <div class="nav-right">
+    <!-- <label *ngIf="personDataService.person">{{personDataService.person.name}}</label> -->
     <a routerLink="/home" routerLinkActive="active">主页</a>
     <a routerLink="/info" routerLinkActive="active">个人信息</a>
     <a *ngIf="personDataService.getPersonModel()" routerLink="/exercise" routerLinkActive="active">练习</a>

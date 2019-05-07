@@ -23,6 +23,7 @@ export class AuthGuard implements CanActivate {
   checkIdentity(url: string): boolean {
     if (this.personDataService.getPersonModel()) {
       if(url === '/add'){
+        this.router.navigate(['/home'], { relativeTo: this.route });
         return false;
       }
       return true;

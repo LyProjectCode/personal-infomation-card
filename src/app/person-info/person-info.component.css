@@ -1,27 +1,26 @@
 .info-table {
+  font-family: Arial, Helvetica, sans-serif;
   width: 70%;
+  padding: 5%;
   max-width: 700px;
-  margin: auto auto 20px auto;
-  /* color: #333; */
-  font-size: 14px;
-  /* background-color: #fff; */
-  border: 1px solid #ddd;
+  margin: 5% auto 20px auto;
+  border: 1px solid #d1cbcb;
   border-spacing: 0;
   border-collapse: collapse;
 }
 
 .info-table caption {
   margin-bottom: 20px;
-  font-size: 18px;
+  color: #607d8b;
 }
 
 .info-table td {
   padding: 8px;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid #d1cbcb;
 }
 
 .info-table td:nth-child(1) {
-  border-right: 1px solid #ddd;
+  border-right: 1px solid #d1cbcb;
   width: 30%;
   text-align: center;
   background: #f0efef;

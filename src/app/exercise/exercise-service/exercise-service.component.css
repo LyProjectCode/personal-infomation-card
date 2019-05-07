@@ -1,0 +1,27 @@
+.container .mood-box {
+  margin-top: 10%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.mood-box .global-box {
+  width: 500px;
+  height: 200px;
+}
+
+.mood-item {
+  padding: 10px;
+  text-align: left;
+}
+
+.mood-box .moment-box {
+  width: 500px;
+  height: 200px;
+}
+
+fieldset {
+  height: 100%;
+}

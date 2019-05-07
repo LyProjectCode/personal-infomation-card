@@ -1,0 +1,28 @@
+.container {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 68px);
+  background-size: cover;
+  background-image: linear-gradient(to top, #7EC0EE, #f6f6f8);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.hello-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -240px;
+  margin-top: -150px;
+  max-width: 480px;
+  max-height: 300px;
+}
+
+.hello-box .info-box {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 3em;
+  color: gray;
+  text-shadow:2px 2px 2px rgb(0, 183, 255);
+}

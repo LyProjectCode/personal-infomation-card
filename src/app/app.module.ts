@@ -17,6 +17,7 @@ import { ExerciseComponent } from './exercise/exercise.component';
 import { ExercisePipeComponent } from './exercise/exercise-pipe/exercise-pipe.component';
 import { ExerciseServiceComponent } from './exercise/exercise-service/exercise-service.component';
 import { MoneyPipe } from './pipe/money.pipe';
+import { ExerciseHomeComponent } from './exercise/exercise-home/exercise-home.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { MoneyPipe } from './pipe/money.pipe';
     ExerciseComponent,
     ExercisePipeComponent,
     ExerciseServiceComponent,
-    MoneyPipe
+    MoneyPipe,
+    ExerciseHomeComponent
   ],
   imports: [
     BrowserModule,

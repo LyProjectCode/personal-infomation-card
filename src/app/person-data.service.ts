@@ -28,6 +28,7 @@ export class PersonDataService {
   public getPersonModel(): any {
     let personInfo = window.localStorage.getItem('personInfo');
     if (personInfo) {
+      this.person = JSON.parse(personInfo);
       return JSON.parse(personInfo);
     }
     return Person[0];

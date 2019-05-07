@@ -1,3 +1,17 @@
-<p>
-  exercise-service works!
-</p>
+<div class="container">
+  <div class="mood-box">
+    <div class="global-box">
+      <fieldset>
+        <legend>全局心情</legend>
+        <div class="mood-item">心情：<label>{{globalMoodService.globalMood?globalMoodService.globalMood:'无'}}</label></div>
+      </fieldset>
+    </div>
+    <div class="moment-box">
+      <fieldset>
+        <legend>此刻心情</legend>
+        <div class="mood-item">心情：<label>{{momentMood}}</label></div>
+        <button (click)="onChangeMomentMood()">生成</button>
+      </fieldset>
+    </div>
+  </div>
+</div>
