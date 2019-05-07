@@ -7,7 +7,8 @@ import { stringify } from '@angular/compiler/src/util';
 export class MoneyPipe implements PipeTransform {
 
   transform(value: any, args?: any): string {
-    const regex = /^\d{1,3}(\.\d{1,2})?$/;
+    // const regex = /^\d{1,3}(\.\d{1,2})?$/;
+    const regex = /^(0|[1-9]\d{0,2})(\.\d{1,2})?$/;
     if (regex.test(value)) {
       const intUnit = new Array('佰', '拾', '');
       const decUnit = new Array('角', '分');
