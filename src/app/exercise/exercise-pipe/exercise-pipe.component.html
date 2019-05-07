@@ -4,13 +4,13 @@
       <legend>金额转换</legend>
       <form #changeForm="ngForm" autocomplete="off">
         <div class="info-box-item">
-          <label for="name">金额：</label>
+          <label for="name">小写金额：</label>
           <input type="text" id="money" [(ngModel)]="transform" #money="ngModel" placeholder="请输入金额" name="name"
             pattern="^(0|[1-9]\d{0,2})(\.\d{1,2})?$" minlength="1" maxlength="6" appNoSpace required />
         </div>
         <div *ngIf="money.invalid" class="err-message">
           <div *ngIf="money.errors.pattern">
-            最多3位整数，两位小数
+            请输入正确的金额格式，最多3位整数，两位小数
           </div>
         </div>
         <div class="info-box-item"><label>大写金额:{{ transform | money }}</label></div>

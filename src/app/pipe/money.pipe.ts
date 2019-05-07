@@ -8,6 +8,7 @@ export class MoneyPipe implements PipeTransform {
 
   transform(value: any, args?: any): string {
     // const regex = /^\d{1,3}(\.\d{1,2})?$/;
+    // 以数字开头和结尾，且小数点只能出现一次，做多三位整数或两位小数
     const regex = /^(0|[1-9]\d{0,2})(\.\d{1,2})?$/;
     if (regex.test(value)) {
       const intUnit = new Array('佰', '拾', '');
