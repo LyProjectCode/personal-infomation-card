@@ -9,34 +9,51 @@ export class MoneyPipe implements PipeTransform {
   transform(value: any, args?: any): string {
     const regex = /^\d{1,3}(\.\d{1,2})?$/;
     if (regex.test(value)) {
-      const intUnit = new Array('佰', '拾', '元');
-      const pointUnit = new Array('角', '分');
+      const intUnit = new Array('佰', '拾', '');
+      const decUnit = new Array('角', '分');
       const baseValue = new Array("零", "壹", "贰", "叁", "肆", "伍", "陆", "柒", "捌", "玖");
-      let source = String(value).split('.');
-      let intValue = source[0];//整数部分
-      let pointValue = source[1];//小数部分
-      let intLen = intValue.length;
-      let pointLen = pointValue ? pointValue.length : 0;
-      let transformMoney = ' ';
-      if (intLen > 0 && Number(intValue) != 0) {
-        for (let i = 0; i < intLen; i++) {
-          let num = intValue.charAt(i);
-          let index = 3 - (intLen - i)
-          transformMoney = transformMoney + baseValue[Number(num)] + intUnit[index];
-        }
-      }
-      if (pointLen > 0 && Number(pointValue) != 0) {
-        for (let j = 0; j < pointLen; j++) {
-          let num = pointValue.charAt(j);
-          transformMoney = transformMoney + baseValue[Number(num)] + pointUnit[j];
-        }
+      const intLast = '元';
+      const integerLast = '整';
+      let chineseStr = ' ';
+      if (String(value) == '0') {
+        chineseStr = baseValue[0] + intLast + integerLast;
       } else {
-        if (Number(intValue) == 0) {
-          transformMoney += baseValue[0] + '元';
+        let source = String(value).split('.');
+        let intNum = source[0];//整数部分
+        let decNum = source[1];//小数部分
+        let intLen = intNum.length;
+        let decLen = decNum ? decNum.length : 0;
+
+        if (intLen > 0 && Number(intNum) != 0) {
+          let zeroCount = 0;
+          for (let i = 0; i < intLen; i++) {
+            let num = intNum.charAt(i);
+            if (num == '0') {
+              zeroCount++;
+            } else {
+              if (zeroCount > 0) {
+                chineseStr += baseValue[0];
+              }
+              zeroCount = 0;
+              let index = 3 - (intLen - i)
+              chineseStr = chineseStr + baseValue[Number(num)] + intUnit[index];
+            }
+          }
+          chineseStr += intLast;
         }
-        transformMoney += '整';
+        if (decLen > 0 && Number(decNum) != 0) {
+          for (let j = 0; j < decLen; j++) {
+            let num = decNum.charAt(j);
+            if(num=='0'){
+              continue;
+            }
+            chineseStr = chineseStr + baseValue[Number(num)] + decUnit[j];
+          }
+        } else {
+          chineseStr += integerLast;
+        }
       }
-      return transformMoney;
+      return chineseStr;
     }
     return '';
   }
