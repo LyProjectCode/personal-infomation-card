@@ -13,7 +13,6 @@ export class NavComponent implements OnInit {
   }
 
   public onEsc() {
-    debugger;
     //判断是否为ie
     if (navigator.userAgent.indexOf("MSIE") > 0) {
       //判断是否为ie6
