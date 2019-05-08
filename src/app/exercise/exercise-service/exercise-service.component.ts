@@ -5,7 +5,8 @@ import { MomentMoodService } from '../moment-mood.service';
 @Component({
   selector: 'app-exercise-service',
   templateUrl: './exercise-service.component.html',
-  styleUrls: ['./exercise-service.component.css', '../../app.component.css']
+  styleUrls: ['./exercise-service.component.css', '../../app.component.css'],
+  providers: [MomentMoodService]
 })
 export class ExerciseServiceComponent implements OnInit {
   private momentMood: string;
