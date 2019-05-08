@@ -1,0 +1,10 @@
+<div>Time:{{currentDate}}</div>
+<div>
+  <fieldset>
+    <legend>秒表</legend>
+    <p>{{temp1}}:{{temp2}}:{{temp3}}:{{temp4}}</p>
+    <button (click)=onReset() [disabled]="stopwatchStatus!=2&&stopwatchStatus!=3">复位</button>
+    <button (click)=onStart() [disabled]="stopwatchStatus==3">{{statusNams[stopwatchStatus]}}</button>
+    <button (click)="onStop()" [disabled]="stopwatchStatus==0||stopwatchStatus==3">停止</button>
+  </fieldset>
+</div>

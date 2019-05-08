@@ -18,6 +18,8 @@ import { ExercisePipeComponent } from './exercise/exercise-pipe/exercise-pipe.co
 import { ExerciseServiceComponent } from './exercise/exercise-service/exercise-service.component';
 import { MoneyPipe } from './pipe/money.pipe';
 import { ExerciseHomeComponent } from './exercise/exercise-home/exercise-home.component';
+import { ExerciseRxjsComponent } from './exercise/exercise-rxjs/exercise-rxjs.component';
+import { ExerciseMapComponent } from './exercise/exercise-map/exercise-map.component';
 
 
 @NgModule({
@@ -33,7 +35,9 @@ import { ExerciseHomeComponent } from './exercise/exercise-home/exercise-home.co
     ExercisePipeComponent,
     ExerciseServiceComponent,
     MoneyPipe,
-    ExerciseHomeComponent
+    ExerciseHomeComponent,
+    ExerciseRxjsComponent,
+    ExerciseMapComponent
   ],
   imports: [
     BrowserModule,

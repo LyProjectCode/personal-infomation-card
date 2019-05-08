@@ -9,6 +9,8 @@ import { ExerciseComponent } from './exercise/exercise.component';
 import { ExercisePipeComponent } from './exercise/exercise-pipe/exercise-pipe.component';
 import { ExerciseServiceComponent } from './exercise/exercise-service/exercise-service.component';
 import { ExerciseHomeComponent } from './exercise/exercise-home/exercise-home.component';
+import { ExerciseRxjsComponent } from './exercise/exercise-rxjs/exercise-rxjs.component';
+import { ExerciseMapComponent } from './exercise/exercise-map/exercise-map.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -21,7 +23,9 @@ const routes: Routes = [
     children: [
       { path: '', component: ExerciseHomeComponent },
       { path: 'pipe', component: ExercisePipeComponent },
-      { path: 'service', component: ExerciseServiceComponent }
+      { path: 'service', component: ExerciseServiceComponent },
+      { path: 'rxjs', component: ExerciseRxjsComponent },
+      { path: 'map', component: ExerciseMapComponent }
     ]}
 ];
 
