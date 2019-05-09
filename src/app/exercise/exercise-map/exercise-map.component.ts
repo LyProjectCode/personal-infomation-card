@@ -78,13 +78,13 @@ export class ExerciseMapComponent implements OnInit {
         if (status === 'complete' && result.regeocode) {
           address = result.regeocode.formattedAddress;
           let info = [];
-          info.push("<div class='input-card content-window-card'><div><img style=\"float:left;\" src=\" ../../../../../assets/img/autonavi.png \"/></div> ");
+          info.push("<div><div><img style=\"float:left;\" src=\" ../../../../../assets/img/autonavi.png \"/></div> ");
           info.push("<div style=\"padding:7px 0px 0px 0px;\"><h4>高德软件</h4>");
           
           if(address.indexOf('IT国际')!=-1){
             info.push('<a href=\"info\">个人信息 :' + that.personDataService.person.name + '</a></div></div>');
           }else{
-            info.push('<p class="input-item">地址 :' + address + '</p></div></div>');
+            info.push('<p>地址 :' + address + '</p></div></div>');
           }
           
           let infoWindow = new AMap.InfoWindow({
