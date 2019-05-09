@@ -1,0 +1,53 @@
+.date-box {
+  font-size: 20px;
+  color: #3B3B3B;
+  padding: 0 40px;
+  text-align: right;
+  cursor: pointer;
+}
+
+.watch-box {
+  margin: auto;
+  padding: 30px 10px;
+  width: 300px;
+  height: 400px;
+  background-color: #3B3B3B;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.watch-box label {
+  font-size: 24px;
+  color: #fff;
+}
+
+.watch-box p {
+  font-size: 40px;
+  color: #fff;
+}
+
+.watch-box button {
+  font-family: Arial,Verdana,Sans-serif;
+  margin: 80px 10px 0 0;
+  border-radius: 4px;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  color: #fff;
+  font-weight: 300;
+  font-size: 1em;
+}
+
+.bg-green {
+  background-color: green;
+}
+
+.bg-red {
+  background-color: red;
+}
+
+.watch-box button:disabled {
+  cursor: not-allowed;
+  color: gray;
+  background-color: #fff;
+}
