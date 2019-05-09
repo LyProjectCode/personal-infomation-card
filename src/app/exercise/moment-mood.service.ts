@@ -1,17 +1,14 @@
 import { Injectable } from '@angular/core';
-import { ExerciseServiceComponent } from './exercise-service/exercise-service.component';
 
-@Injectable({
-  providedIn: ExerciseServiceComponent
-})
+@Injectable()
 export class MomentMoodService {
   public moodList=['兴奋','高兴','悲伤','愤怒','快乐','期待','愉悦'];
+  public momentMood = '高兴';
 
   constructor() { }
 
-  public randomOneMood():string {
+  public randomOneMood():void {
     let len = this.moodList.length;
-    let momentMood = this.moodList[Math.floor(Math.random()*len)];
-    return momentMood;
+    this.momentMood = this.moodList[Math.floor(Math.random()*len)];
   }
 }

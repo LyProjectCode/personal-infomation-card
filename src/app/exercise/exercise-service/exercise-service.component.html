@@ -4,13 +4,14 @@
       <fieldset>
         <legend>全局心情</legend>
         <div class="mood-item">心情：<label>{{globalMoodService.globalMood?globalMoodService.globalMood:'无'}}</label></div>
+        <button (click)="onChangeGlobalMood()">更换</button>
       </fieldset>
     </div>
     <div class="moment-box">
       <fieldset>
         <legend>此刻心情</legend>
-        <div class="mood-item">心情：<label>{{momentMood}}</label></div>
-        <button (click)="onChangeMomentMood()">生成</button>
+        <div class="mood-item">心情：<label>{{momentMoodService.momentMood?momentMoodService.momentMood:'无'}}{{momentMood}}</label></div>
+        <button (click)="onChangeMomentMood()">更换</button>
       </fieldset>
     </div>
   </div>
