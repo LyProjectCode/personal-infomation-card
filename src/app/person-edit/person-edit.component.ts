@@ -16,14 +16,15 @@ export class PersonEditComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
     private personDataService: PersonDataService,
-    private personHttpService: PersonHttpService) { }
+    private personHttpService: PersonHttpService
+  ) {}
 
   ngOnInit() {
     this.getPerson();
   }
 
   public getPerson(): void {
-    let personInfo = this.personDataService.getPersonModel();
+    const personInfo = this.personDataService.getPersonModel();
     if (personInfo) {
       this.person = personInfo;
     }
@@ -41,7 +42,7 @@ export class PersonEditComponent implements OnInit {
   // 取消编辑，如果数据发生变化进行提示
   public cancel(dirtyStatus: boolean): void {
     if (dirtyStatus) {
-      let ifEsc = confirm('有数据发生修改，是否放弃更改？');
+      const ifEsc = confirm('有数据发生修改，是否放弃更改？');
       if (!ifEsc) {
         return;
       }

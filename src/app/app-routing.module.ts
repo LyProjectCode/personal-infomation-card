@@ -26,7 +26,9 @@ const routes: Routes = [
       { path: 'service', component: ExerciseServiceComponent },
       { path: 'rxjs', component: ExerciseRxjsComponent },
       { path: 'map', component: ExerciseMapComponent }
-    ]}
+    ]
+  },
+  { path: '**', redirectTo: '/home', pathMatch: 'full' }
 ];
 
 @NgModule({

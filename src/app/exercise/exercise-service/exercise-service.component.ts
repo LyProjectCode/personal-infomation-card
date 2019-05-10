@@ -9,20 +9,18 @@ import { MomentMoodService } from '../moment-mood.service';
   providers: [MomentMoodService]
 })
 export class ExerciseServiceComponent implements OnInit {
-
   constructor(
     private globalMoodService: GlobalMoodService,
     private momentMoodService: MomentMoodService
-  ) { }
+  ) {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   public onChangeGlobalMood() {
     this.globalMoodService.chooseOneMood();
   }
 
-  private onChangeMomentMood() {
+  public onChangeMomentMood() {
     this.momentMoodService.randomOneMood();
   }
 }

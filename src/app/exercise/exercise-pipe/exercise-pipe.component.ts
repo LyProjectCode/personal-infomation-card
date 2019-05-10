@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-exercise-pipe',
@@ -6,10 +6,8 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./exercise-pipe.component.css', '../../app.component.css']
 })
 export class ExercisePipeComponent implements OnInit {
-  private transform:number;
-  constructor() { }
+  public transform: number;
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

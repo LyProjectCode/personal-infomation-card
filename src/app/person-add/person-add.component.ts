@@ -9,16 +9,15 @@ import { PersonHttpService } from '../person-http.service';
   templateUrl: './person-add.component.html',
   styleUrls: ['./person-add.component.css', '../app.component.css']
 })
-
 export class PersonAddComponent implements OnInit {
-
-  private person = new Person(null, '', '男', null, '', '');
+  public person = new Person(null, '', '男', null, '', '');
 
   constructor(
     private router: Router,
     private route: ActivatedRoute,
     private personDataService: PersonDataService,
-    private personHttpService: PersonHttpService) { }
+    private personHttpService: PersonHttpService
+  ) {}
 
   ngOnInit() {
     this.checkStatus();
@@ -35,7 +34,7 @@ export class PersonAddComponent implements OnInit {
   }
   // 判断个人信息是否已经保存
   private checkStatus(): void {
-    let personInfo = this.personDataService.getPersonModel();
+    const personInfo = this.personDataService.getPersonModel();
     if (personInfo) {
       this.router.navigate(['/info'], { relativeTo: this.route });
     }

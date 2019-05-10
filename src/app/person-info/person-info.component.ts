@@ -10,14 +10,14 @@ import { PersonDataService } from '../person-data.service';
 export class PersonInfoComponent implements OnInit {
   @Input() person: Person;
 
-  constructor(private personDataService: PersonDataService) { }
+  constructor(private personDataService: PersonDataService) {}
 
   ngOnInit() {
     this.getPerson();
   }
 
   public getPerson(): void {
-    let personInfo = this.personDataService.getPersonModel();
+    const personInfo = this.personDataService.getPersonModel();
     if (personInfo) {
       this.person = personInfo;
     }
