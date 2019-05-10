@@ -1,11 +1,10 @@
 export class DateHelper {
-
   public static currentDateTime(): string {
     let timeStr = '';
-    let date = new Date();
-    let year = date.getFullYear();
-    let month = date.getMonth() + 1;
-    let day = date.getDate();
+    const date = new Date();
+    const year = date.getFullYear();
+    const month = date.getMonth() + 1;
+    const day = date.getDate();
     let hour = date.getHours() + '';
     if (Number(hour) < 10) {
       hour = '0' + hour;

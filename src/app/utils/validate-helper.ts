@@ -2,8 +2,7 @@
  * Created by zack on 8/2/18.
  */
 export class ValidateHelper {
-
-  /** 校验是否为有效电话号码*/
+  /** 校验是否为有效电话号码 */
   public static Phone(phone: string): boolean {
     if (phone === '' || phone == null) {
       return true;
@@ -32,17 +31,14 @@ export class ValidateHelper {
    * @param target 目标字符串
    * @param min 最短
    * @param max 最长
-   * @returns {boolean}
    */
   public static Length(target: string, min: number, max: number): boolean {
-    return (target == null || (target.length >= min && target.length <= max));
+    return target == null || (target.length >= min && target.length <= max);
   }
 
   /**
    * 校验非中文的字符串
-   * @param {string} param
-   * @returns {boolean}
-   * @constructor
+   * @param param 目标字符串
    */
   public static NotChinese(param: string): boolean {
     const regex = /^[a-zA-Z0-9]+$/;
@@ -51,8 +47,7 @@ export class ValidateHelper {
 
   /**
    * 校验年龄
-   * @param age
-   * @returns {boolean}
+   * @param age 年龄
    */
   public static Age(age: string): boolean {
     const regex = /^(?:[1-9][0-9]?|1[04][0-9]|150)$/;
