@@ -24,7 +24,7 @@ export class LicensePlateHelper {
       return PlateNumberState.invaild;
     }
     const verifyPlateNumber = plateNumber.slice(2); // 去掉第一位的汉字和第二位的字母
-    const regex = /^{领使学警港澳]}{1}$/;
+    const regex = /^[领使学警港澳]{1}$/;
     if (regex.test(verifyPlateNumber)) {// 判断是否为特殊车牌
       return PlateNumberState.special;
     } else if (verifyPlateNumber.length === 5) { // 非特殊车牌，长度为5位的需要用户选择黄蓝号牌
