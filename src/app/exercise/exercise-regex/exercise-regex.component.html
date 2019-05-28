@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="info-box">    
+      <div class="info-box-item">
+        <label for="plate_number">车牌验证：</label>
+        <input [(ngModel)]="plateNumber" (blur)="onBlur()" appNoSpace />
+      </div>
+      <div class="err-message">
+          {{message}}      
+      </div>
+  </div>
+</div>

@@ -20,6 +20,7 @@ import { MoneyPipe } from './pipe/money.pipe';
 import { ExerciseHomeComponent } from './exercise/exercise-home/exercise-home.component';
 import { ExerciseRxjsComponent } from './exercise/exercise-rxjs/exercise-rxjs.component';
 import { ExerciseMapComponent } from './exercise/exercise-map/exercise-map.component';
+import { ExerciseRegexComponent } from './exercise/exercise-regex/exercise-regex.component';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import { ExerciseMapComponent } from './exercise/exercise-map/exercise-map.compo
     MoneyPipe,
     ExerciseHomeComponent,
     ExerciseRxjsComponent,
-    ExerciseMapComponent
+    ExerciseMapComponent,
+    ExerciseRegexComponent
   ],
   imports: [
     BrowserModule,

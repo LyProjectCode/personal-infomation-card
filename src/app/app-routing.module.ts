@@ -11,6 +11,7 @@ import { ExerciseServiceComponent } from './exercise/exercise-service/exercise-s
 import { ExerciseHomeComponent } from './exercise/exercise-home/exercise-home.component';
 import { ExerciseRxjsComponent } from './exercise/exercise-rxjs/exercise-rxjs.component';
 import { ExerciseMapComponent } from './exercise/exercise-map/exercise-map.component';
+import { ExerciseRegexComponent } from './exercise/exercise-regex/exercise-regex.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -25,7 +26,8 @@ const routes: Routes = [
       { path: 'pipe', component: ExercisePipeComponent },
       { path: 'service', component: ExerciseServiceComponent },
       { path: 'rxjs', component: ExerciseRxjsComponent },
-      { path: 'map', component: ExerciseMapComponent }
+      { path: 'map', component: ExerciseMapComponent },
+      { path: 'regex', component: ExerciseRegexComponent }
     ]
   },
   { path: '**', redirectTo: '/home', pathMatch: 'full' }
