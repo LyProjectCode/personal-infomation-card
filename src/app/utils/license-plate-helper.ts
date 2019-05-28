@@ -27,17 +27,19 @@ export class LicensePlateHelper {
     const regex1 = /^[A-HJ-NP-Z\d]{4}学|领|警$/;
     const regex2 = /^粤[A-HJ-NP-Z\d][A-HJ-NP-Z\d]{4}港|澳$/;
     const regex3 = /^\d{6}使$/;
+    const regex4 = /^[D|F][A-HJ-NP-Z\d]\d{4}$/;
+    const regex5 = /^\d{5}[D|F]$/;
     if (regex1.test(verifyPlateNumber) || regex2.test(verifyPlateNumber) || regex3.test(verifyPlateNumber)) {// 判断是否为特殊车牌
       return PlateNumberState.special;
     } else if (verifyPlateNumber.length === 5) { // 非特殊车牌，长度为5位的需要用户选择黄蓝号牌
       return PlateNumberState.yellowOrBlue;
     } else if (verifyPlateNumber.length === 6) { // 判断是否为小型新能源车或者大型新能源车
-      const firstNumber = verifyPlateNumber.slice(0, 1);
-      const lastNumber = verifyPlateNumber.slice(-1);
-      if (firstNumber === EnergyType.firstD || firstNumber === EnergyType.firstF) {
+      if (regex4.test(verifyPlateNumber)) {
         return PlateNumberState.small_energy;
-      } else if (lastNumber === EnergyType.lastD || lastNumber === EnergyType.lastF) {
+      } else if (regex5.test(verifyPlateNumber)) {
         return PlateNumberState.big_energy;
+      } else {
+        return PlateNumberState.invaild;
       }
     }
     return PlateNumberState.other;
